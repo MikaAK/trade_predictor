@@ -1,0 +1,3 @@
+defmodule AiPredictor do
+
+end
