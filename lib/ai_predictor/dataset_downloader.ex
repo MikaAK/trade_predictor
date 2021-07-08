@@ -39,7 +39,7 @@ defmodule AiPredictor.DatasetDownloader do
 
   defp write_file(path, contents) do
     with {:error, :enoent} <- File.write(path, contents),
-         :ok <- File.mkdir_p(String.replace(path, ~r/[^\/]+$/, "") |> IO.inspect),
+         :ok <- File.mkdir_p(String.replace(path, ~r/[^\/]+$/, "")),
          :ok <- File.touch(path) do
       File.write(path, contents)
     end

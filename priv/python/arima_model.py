@@ -11,9 +11,9 @@ def predict(symbol):
   current_path = pathlib.Path(__file__).parent.resolve()
   stock_csv_path = current_path.joinpath(
     '../datasets/{}.csv'
-      .format(symbol)
-      .replace("b'", "")
-      .replace("'", "")
+      .format(symbol.decode("utf-8"))
+      #  .replace("b'", "")
+      #  .replace("'", "")
   )
 
   stock_data = pd.read_csv(stock_csv_path)
@@ -48,6 +48,4 @@ def predict(symbol):
   model_fit = model.fit()
   result = model_fit.forecast()[0]
 
-  print(result)
-
-  return result
+  return str(result)
