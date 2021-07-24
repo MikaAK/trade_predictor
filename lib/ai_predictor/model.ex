@@ -11,10 +11,14 @@ defmodule AiPredictor.Model do
   end
 
   def predict_tomorrows_close(pid \\ @default_opts[:name], symbol) do
-    pid
+    res = pid
       |> :python.call(:arima_model, :predict, [symbol])
       |> to_string
       |> Float.parse
       |> elem(0)
+
+    :python.stop(pid)
+
+    res
   end
 end

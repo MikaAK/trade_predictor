@@ -24,3 +24,5 @@ ai_predictor-*.tar
 
 priv/python/__pycache__/
 priv/datasets
+priv/predicitons
+priv/predictions
