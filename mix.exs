@@ -25,7 +25,11 @@ defmodule AiPredictor.MixProject do
       {:erlport, "~> 0.10"},
       {:finch, "~> 0.8"},
       {:tzdata, "~> 1.1"},
-      {:jason, "~> 1.1"}
+      {:jason, "~> 1.1"},
+      {:nimble_csv, "~> 1.1"},
+
+      {:kino, "~> 0.3"},
+      {:vega_lite, "~> 0.1"}
     ]
   end
 end

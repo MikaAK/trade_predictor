@@ -5,7 +5,7 @@ defmodule AiPredictor.Application do
 
   use Application
 
-  @prediction_symbols ["EEM", "QQQ", "SPY", "NVDA", "TSLA", "AAPL", "JETS", "KBE"]
+  @prediction_symbols ["EEM", "QQQ", "SPY", "NVDA", "TSLA", "AAPL", "JETS", "KBE", "PG", "JNJ", "DIS", "XOM", "KO", "VZ", "PFE", "PEP", "MCD", "JPST"]
 
   def start(_type, _args) do
     children = [
